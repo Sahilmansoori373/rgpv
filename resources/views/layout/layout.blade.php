@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Multi-Auth App</title>
+  	<title>Student Resources</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -36,6 +36,12 @@
                 </li>
                 <li>
                     <a href="{{ route('manageRole') }}"><span class="fa fa-role mr-3"></span> Manage Role</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-role mr-3"></span>Manage content</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-role mr-3"></span>Announcement</a>
                 </li>
             @endif
             
