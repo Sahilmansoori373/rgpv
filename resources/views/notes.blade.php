@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
  
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <h2></h2>
@@ -40,7 +40,6 @@
                                         <th>pyq3</th>
                                         <th>notes</th>
                                         <th>syllabus</th>
-                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -50,24 +49,34 @@
                                         {{-- <td>{{ $item->name }}</td> --}}
                                         <td>{{ $data->id }}</td>           
                                         <td>
-                                            <div class="row justify-content-center">
-                                                <iframe src="{{ asset('folder/10th.pdf') }}" width="50%" height="600">
-                                                    This browser does not support PDFs. Please download the PDF to view it: <a href="{{ asset('folder/10th.pdf') }}">Download PDF</a>
-                                                </iframe>
-                                        </td>                             
-                                        </div>
-                                        <td>{{ $data->pyq1 }}</td>
-                                        <td>{{ $data->pyq2 }}</td>
-                                        <td>{{ $data->pyq3 }}</td>
+                                            {{-- <div class="row justify-content-center"> --}}
+                                                <iframe height="800"  width="400" src="/assets/folder/10th.pdf"></iframe>
+                                                {{-- <iframe src="{{ asset('folder/10th.pdf') }}" width="50%" height="600"> --}}
+                                                    {{-- This browser does not support PDFs. Please download the PDF to view it: <a href="{{ asset('folder/10th.pdf') }}">Download PDF</a> --}}
+                                                    {{-- </iframe> --}}
+                                                </td>                             
+                                            {{-- </div> --}}
+                                            {{-- <td>{{ $data->pyq1 }}</td> --}}
+                                            {{-- <td>{{ $data->pyq2 }}</td> --}}
+                                            <td>
+                                                <iframe height="800"  width="400" src="/assets/folder/qool.pdf"></iframe>
+                                            </td>
+                                            <td>
+                                                <iframe height="800"  width="400" src="/assets/folder/10th.pdf"></iframe>
+                                            </td>
+                                            <td>
+                                                <iframe height="800"  width="400" src="/assets/folder/qool.pdf"></iframe>
+                                            </td>
+                                        {{-- <td>{{ $data->pyq3 }}</td> --}}
                                         {{-- <embed src="{{ $data->pyq1 }}" type="application/pdf" width="100%" height="600px"> --}}
-                                        <td>{{ $data->notes }}</td>
-                                        <td>{{ $data->syllabus }}</td>
+                                        {{-- <td>{{ $data->notes }}</td> --}}
+                                        {{-- <td>{{ $data->syllabus }}</td> --}}
  
-                                        <td>
+                                        {{-- <td> --}}
                                             {{-- <a href="{{ route('view.notes', $item->id)}}" title="View Subject"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> --}}
                                             {{-- <a href="#" title="View Subject"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> --}}
                                             {{-- <a href="{{ url('/student/' . $item->id) }}" title="View Subject"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> --}}
-                                         </td>
+                                         {{-- </td> --}}
                                     </tr>
                                     {{-- @endforeach --}}
                                 </tbody>

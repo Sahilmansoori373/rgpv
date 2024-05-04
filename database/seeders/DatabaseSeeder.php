@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $users = [
             [
                 'name'=>'Super Admin',
+                'role'=>'1',
                 'email'=>'superadmin@gmail.com',
                 'password'=> Hash::make('123456')
             ],

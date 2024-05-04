@@ -38,7 +38,10 @@
                     <a href="{{ route('manageRole') }}"><span class="fa fa-role mr-3"></span> Manage Role</a>
                 </li>
                 <li>
-                    <a href="#"><span class="fa fa-role mr-3"></span>Manage content</a>
+                    <a href="{{ route('content')}}"><span class="fa fa-role mr-3"></span>Manage Subjects</a>
+                </li>
+                <li>
+                    <a href="{{ route('notes')}}"><span class="fa fa-role mr-3"></span>Manage Notes</a>
                 </li>
                 <li>
                     <a href="#"><span class="fa fa-role mr-3"></span>Announcement</a>

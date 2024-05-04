@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Notes extends Model
 {
     use HasFactory;
+    public function Subjects(){
+        return $this->belongsTo(Subjects::class);
+    }
 }

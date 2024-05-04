@@ -27,7 +27,7 @@ Route::get('/login', function () {
     return view('login');
 });
 Route::get('/Subject',[SubjectsController::class,'index'])->name('show');
-Route::get('/notes/{id}',[NotesController::class,'show'])->name('view.notes');
+Route::get('/notes/{id}',[NotesController::class,'view'])->name('show.notes');
 
 Route::get('/register',[AuthController::class,'loadRegister']);
 Route::post('/register',[AuthController::class,'register'])->name('register');
@@ -44,6 +44,23 @@ Route::group(['prefix' => 'super-admin','middleware'=>['web','isSuperAdmin']],fu
 
     Route::get('/users',[SuperAdminController::class,'users'])->name('superAdminUsers');
     Route::get('/manage-role',[SuperAdminController::class,'manageRole'])->name('manageRole');
+    Route::get('/subjects',[SubjectsController::class,'adminindex'])->name('content');
+    Route::get('/subjects/add',[SubjectsController::class,'create'])->name('addsubject');
+    Route::post('/subjects/store',[SubjectsController::class,'store'])->name('store.subject');
+    Route::get('/subjects/show/{id}',[SubjectsController::class,'show'])->name('view.subject');
+    Route::get('/subjects/edit/{id}',[SubjectsController::class,'edit'])->name('edit.subject');
+    Route::post('/subjects/update/{id}',[SubjectsController::class,'update'])->name('update.subject');
+    Route::get('/subjects/delete/{id}',[SubjectsController::class,'destroy'])->name('delete.subject');
+    
+    Route::get('/notes',[NotesController::class,'adminindex'])->name('notes');
+    Route::get('/notes/add',[NotesController::class,'create'])->name('addnotes');
+    Route::post('/notes/store',[NotesController::class,'store'])->name('store.notes');
+    Route::get('/notes/show/{id}',[NotesController::class,'show'])->name('view.notes');
+    Route::get('/notes/edit/{id}',[NotesController::class,'edit'])->name('edit.notes');
+    Route::post('/notes/update/{id}',[NotesController::class,'update'])->name('update.notes');
+    Route::get('/notes/delete/{id}',[NotesController::class,'destroy'])->name('delete.notes');
+    
+    
     Route::post('/update-role',[SuperAdminController::class,'updateRole'])->name('updateRole');
 });
 
