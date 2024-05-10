@@ -1,6 +1,9 @@
 @extends('layout/layout')
 
 @section('space-work')
+<h1>
+  {!! Session::has('msg') ? Session::get("msg") : '' !!}
+</h1>
 
     <h2 class="mb-4">Super Admin</h2>
 

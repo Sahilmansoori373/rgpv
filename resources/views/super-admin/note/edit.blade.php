@@ -1,6 +1,9 @@
 @extends('layout/layout')
 
 @section('space-work')
+<h1>
+  {!! Session::has('msg') ? Session::get("msg") : '' !!}
+</h1>
 
     <h2 class="mb-4">Super Admin</h2>
 
@@ -8,7 +11,7 @@
         <div class="card-header">Notes Page</div>
         <div class="card-body">
             
-            <form action="{{ route('update.notes',$notes->id)}}" method="post">
+            <form action="{{ route('spupdate.notes',$notes->id)}}" method="post">
                 @csrf
                 <div class="form-group">
                   <label>Pyq 1</label>

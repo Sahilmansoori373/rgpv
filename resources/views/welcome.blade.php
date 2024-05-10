@@ -21,7 +21,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
       
-        <title>Laravel</title>
+        <title>RGPV</title>
         
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -87,7 +87,7 @@
                   </li>
                   <li class="dropdown"><a href="#"><span>third Year </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                      <li><a href="#">Semester 5</a></li>
+                      <li><a href="{{ route('watch',5)}}">Semester 5</a></li>
                       <li><a href="{{ route('show')}}"> Semester 6</a></li>
                     </ul>
                   </li>

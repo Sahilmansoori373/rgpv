@@ -49,12 +49,14 @@
 @section('space-work')
 
 <h2 class="mb-4">Super Admin</h2>
- 
+<h1>
+    {!! Session::has('msg') ? Session::get("msg") : '' !!}
+</h1>
+
 <div class="card">
   <div class="card-header">Subjects Page</div>
   <div class="card-body">
-      
-      <form action="{{ route('store.subject')}}" method="post">
+      <form action="{{ route('spstore.subject')}}" method="post">
         @csrf
         <div class="form-group">
             <label>Name</label>

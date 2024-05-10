@@ -49,47 +49,30 @@
 @section('space-work')
 
 <h2 class="mb-4">Super Admin</h2>
- 
+<h1>
+    {!! Session::has('msg') ? Session::get("msg") : '' !!}
+</h1>
+
 <div class="card">
   <div class="card-header">Subjects Page</div>
   <div class="card-body">
-      
-    <form action="{{ route('store.notes')}}" method="post" enctype="multipart/form-data">
+      <form action="{{ route('store.subject')}}" method="post">
         @csrf
-        <div class="col-md-2">
-            <label for="">Select Subject</label>
-        </div>
-        <div class="col-md-4">
-            <select name="id" required class="form-control" style="border: 1px solid;">
-                <option value="">Select Subject</option>
-                @foreach ($data as $user)
-                    <option value="{{ $user->id }}">{{ $user->name }}</option>
-                @endforeach
-                
-            </select>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name"  class="form-control">
         </div>
         <div class="form-group">
-            <label for="pyq1">PYQ1 (PDF):</label>
-            <input type="file" id="pyq1" name="pyq1" accept=".pdf" required>
+        <label>Subject Code</label>
+        <input type="text" name="code"  class="form-control">
         </div>
         <div class="form-group">
-            <label for="pyq2">PYQ2 (PDF):</label>
-            <input type="file" id="pyq2" name="pyq2" accept=".pdf" required>
-        </div>
-        <div class="form-group">
-            <label for="pyq3">PYQ3 (PDF):</label>
-            <input type="file" id="pyq3" name="pyq3" accept=".pdf" required>
-        </div>
-        <div class="form-group">
-            <label for="notes">Notes (PDF):</label>
-            <input type="file" id="notes" name="notes" accept=".pdf" required>
-        </div>
-        <div class="form-group">
-          <label>Syllabus</label>
-          <input type="text" name="syllabus" class="form-control">
+        <label>Semester</label>
+        <input type="text" name="semester" class="form-control">
         </div>
         <input type="submit" id="submit">
-  </form>
+    </form>
+   
   </div>
 </div>
  

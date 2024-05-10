@@ -8,7 +8,7 @@
         <div class="container" data-aos="fade-up">
   
           <div class="section-header">
-            <h3>Notes</h3>
+            <h3>Subjects</h3>
           </div>
             <div class="row">
      
@@ -19,39 +19,29 @@
                         </div>
                         <div class="card-body">
                             <div class="card-body">
-                                
+                               
+                                <br/>
+                            <br/>
+                            <br/>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            {{-- <th>Subject Name</th> --}}
-                                            <th>Pyq 1</th>
-                                            <th>Pyq 2</th>
-                                            <th>Pyq 3</th>
-                                            <th>Notes</th>
-                                            <th>Syllabus</th>
+                                            <th>Subject Name</th>
+                                            <th>Subject Code</th>
+                                            <th>Semester</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     {{-- @foreach($subject as $item) --}}
                                     <tr>
-                                            <td>{{ $notes->id }}</td>
-                                            <td>{{ $notes->pyq1 }}</td>
-                                            <td>
-                                                <iframe height="800"  width="400" src="/assets/{{$notes->pyq1}}"></iframe>
-                                            </td>
-                                            <td>
-                                                <iframe height="800"  width="400" src="/assets/{{$notes->pyq2}}"></iframe>
-                                            </td>
-                                            <td>
-                                                <iframe height="800"  width="400" src="/assets/{{$notes->pyq3}}"></iframe>
-                                            </td>
-                                            <td>
-                                                <iframe height="800"  width="400" src="/assets/{{$notes->notes}}"></iframe>
-                                            </td>
-                                            <td>{{ $notes->syllabus }}</td>
+                                            <td>{{ $subjects->id }}</td>
+                                            <td>{{ $subjects->name }}</td>
+                                            <td>{{ $subjects->code }}</td>
+                                            <td> Semester {{ $subjects->semester }}</td>
+     
                                             <td>
                                                 {{-- <a href="{{ route('view.subject', $item->id)}}" title="View Subject"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> --}}
                                                 {{-- <a href="#" title="View Subject"><button class="btn btn-success btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Edit</button></a> --}}
@@ -70,5 +60,4 @@
         </div>
         {{-- </div> --}}
       </section>
-     
-            @endsection
+@endsection

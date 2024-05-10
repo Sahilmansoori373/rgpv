@@ -50,7 +50,7 @@
                                         <td>{{ $data->id }}</td>           
                                         <td>
                                             {{-- <div class="row justify-content-center"> --}}
-                                                <iframe height="800"  width="400" src="/assets/folder/10th.pdf"></iframe>
+                                                <iframe height="400"  width="400" src="/assets/folder/{{$data->pyq1}}"></iframe>
                                                 {{-- <iframe src="{{ asset('folder/10th.pdf') }}" width="50%" height="600"> --}}
                                                     {{-- This browser does not support PDFs. Please download the PDF to view it: <a href="{{ asset('folder/10th.pdf') }}">Download PDF</a> --}}
                                                     {{-- </iframe> --}}
@@ -59,13 +59,13 @@
                                             {{-- <td>{{ $data->pyq1 }}</td> --}}
                                             {{-- <td>{{ $data->pyq2 }}</td> --}}
                                             <td>
-                                                <iframe height="800"  width="400" src="/assets/folder/qool.pdf"></iframe>
+                                                <iframe height="400"  width="400" src="/assets/folder/{{$data->pyq2}}"></iframe>
                                             </td>
                                             <td>
-                                                <iframe height="800"  width="400" src="/assets/folder/10th.pdf"></iframe>
+                                                <iframe height="400"  width="400" src="/assets/folder/{{$data->pyq3}}"></iframe>
                                             </td>
                                             <td>
-                                                <iframe height="800"  width="400" src="/assets/folder/qool.pdf"></iframe>
+                                                <iframe height="400"  width="400" src="/assets/folder/{{$data->notes}}"></iframe>
                                             </td>
                                         {{-- <td>{{ $data->pyq3 }}</td> --}}
                                         {{-- <embed src="{{ $data->pyq1 }}" type="application/pdf" width="100%" height="600px"> --}}

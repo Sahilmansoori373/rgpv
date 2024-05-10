@@ -38,6 +38,34 @@
                     <a href="{{ route('manageRole') }}"><span class="fa fa-role mr-3"></span> Manage Role</a>
                 </li>
                 <li>
+                    <a href="{{ route('spcontent')}}"><span class="fa fa-role mr-3"></span>Manage Subjects</a>
+                </li>
+                <li>
+                    <a href="{{ route('spnotes')}}"><span class="fa fa-role mr-3"></span>Manage Notes</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-role mr-3"></span>Announcement</a>
+                </li>
+            @endif
+            
+            @if(auth()->user()->role == 2)
+            <li>
+              <a href="{{ route('manage') }}"><span class="fa fa-role mr-3"></span>Manage Role</a>
+          </li>
+          <li>
+              <a href="{{ route('sbcontent')}}"><span class="fa fa-role mr-3"></span>Manage Subjects</a>
+          </li>
+          <li>
+              <a href="{{ route('sbnotes')}}"><span class="fa fa-role mr-3"></span>Manage Notes</a>
+          </li>
+          <li>
+              <a href="#"><span class="fa fa-role mr-3"></span>Announcement</a>
+          </li>
+          
+            @endif
+            
+            @if(auth()->user()->role == 3)
+                <li>
                     <a href="{{ route('content')}}"><span class="fa fa-role mr-3"></span>Manage Subjects</a>
                 </li>
                 <li>
@@ -48,7 +76,7 @@
                 </li>
             @endif
             
-        @yield('li')
+            @yield('li')
             <li>
                 <a href="/logout"><span class="fa fa-sign-out mr-3"></span> Logout</a>
             </li>
