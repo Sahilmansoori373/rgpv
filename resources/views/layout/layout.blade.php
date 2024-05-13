@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Multi-Auth App</title>
+  	<title>Student Resources</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -37,9 +37,46 @@
                 <li>
                     <a href="{{ route('manageRole') }}"><span class="fa fa-role mr-3"></span> Manage Role</a>
                 </li>
+                <li>
+                    <a href="{{ route('spcontent')}}"><span class="fa fa-role mr-3"></span>Manage Subjects</a>
+                </li>
+                <li>
+                    <a href="{{ route('spnotes')}}"><span class="fa fa-role mr-3"></span>Manage Notes</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-role mr-3"></span>Announcement</a>
+                </li>
             @endif
             
-        @yield('li')
+            @if(auth()->user()->role == 2)
+            <li>
+              <a href="{{ route('manage') }}"><span class="fa fa-role mr-3"></span>Manage Role</a>
+          </li>
+          <li>
+              <a href="{{ route('sbcontent')}}"><span class="fa fa-role mr-3"></span>Manage Subjects</a>
+          </li>
+          <li>
+              <a href="{{ route('sbnotes')}}"><span class="fa fa-role mr-3"></span>Manage Notes</a>
+          </li>
+          <li>
+              <a href="#"><span class="fa fa-role mr-3"></span>Announcement</a>
+          </li>
+          
+            @endif
+            
+            @if(auth()->user()->role == 3)
+                <li>
+                    <a href="{{ route('content')}}"><span class="fa fa-role mr-3"></span>Manage Subjects</a>
+                </li>
+                <li>
+                    <a href="{{ route('notes')}}"><span class="fa fa-role mr-3"></span>Manage Notes</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-role mr-3"></span>Announcement</a>
+                </li>
+            @endif
+            
+            @yield('li')
             <li>
                 <a href="/logout"><span class="fa fa-sign-out mr-3"></span> Logout</a>
             </li>

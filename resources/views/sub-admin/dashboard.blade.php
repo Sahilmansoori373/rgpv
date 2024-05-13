@@ -2,14 +2,6 @@
 
 @section('li')
 
-<li>
-    <a href="{{ route('manage') }}"><span class="fa fa-role mr-3"></span>Manage Role</a>
-</li>
-
-<li>
-    <a href="{{ route('manageRole') }}"><span class="fa fa-role mr-3"></span>Subjects</a>
-</li>
-
 @endsection
 @section('space-work')
 
