@@ -27,7 +27,14 @@ Route::get('/login', function () {
     return view('login');
 });
 Route::get('/Subject',[SubjectsController::class,'index'])->name('show');
-Route::get('/Subject/{id}',[SubjectsController::class,'get'])->name('watch');
+Route::get('/Semester1',[SubjectsController::class,'sems1'])->name('sem1');
+Route::get('/Semester2',[SubjectsController::class,'sems2'])->name('sem2');
+Route::get('/Semester3',[SubjectsController::class,'sems3'])->name('sem3');
+Route::get('/Semester4',[SubjectsController::class,'sems4'])->name('sem4');
+Route::get('/Semester5',[SubjectsController::class,'sems5'])->name('sem5');
+Route::get('/Semester6',[SubjectsController::class,'sems6'])->name('sem6');
+Route::get('/Semester7',[SubjectsController::class,'sems7'])->name('sem7');
+Route::get('/Semester8',[SubjectsController::class,'sems8'])->name('sem8');
 Route::get('/notes/{id}',[NotesController::class,'view'])->name('show.notes');
 
 Route::get('/register',[AuthController::class,'loadRegister']);

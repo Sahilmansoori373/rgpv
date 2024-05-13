@@ -24,11 +24,48 @@ class SubjectsController extends Controller
         $subjects = Subjects::all();
         return view ('subject')->with('subject', $subjects);
     }
-    public function get(string $id){
-        $subject = Subjects::where('semester','=',$id);
+    public function sems1(){
+        $subject = Subjects::where('semester',1)->get();
         // dd($subject) ;
-        // return view ('semester')->with('subject', $subject);
+        return view ('semester1')->with('subject', $subject);
     }
+    
+    public function sems2(){
+        $subject = Subjects::where('semester',2)->get();
+        // dd($subject) ;
+        return view ('semester2')->with('subject', $subject);
+    }
+    public function sems3(){
+        $subject = Subjects::where('semester',3)->get();
+        // dd($subject) ;
+        return view ('semester3')->with('subject', $subject);
+    }
+    public function sems4(){
+        $subject = Subjects::where('semester',4)->get();
+        // dd($subject) ;
+        return view ('semester4')->with('subject', $subject);
+    }
+    public function sems5(){
+        $subject = Subjects::where('semester',5)->get();
+        // dd($subject) ;
+        return view ('semester5')->with('subject', $subject);
+    }
+    public function sems6(){
+        $subject = Subjects::where('semester',6)->get();
+        // dd($subject) ;
+        return view ('semester6')->with('subject', $subject);
+    }
+    public function sems7(){
+        $subject = Subjects::where('semester',7)->get();
+        // dd($subject) ;
+        return view ('semester7')->with('subject', $subject);
+    }
+    public function sems8(){
+        $subject = Subjects::where('semester',8)->get();
+        // dd($subject) ;
+        return view ('semester8')->with('subject', $subject);
+    }
+
     public function adminindex()
     {
 

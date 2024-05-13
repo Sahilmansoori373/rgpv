@@ -6,8 +6,8 @@
         <link href="assets/img/favicon.png" rel="icon">
         <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <!-- Google Fonts -->
-  {{-- <link rel="preconnect" href="https://fonts.googleapis.com"> --}}
-  {{-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> --}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -75,33 +75,33 @@
             <ul>
                 <li class="dropdown"><a href="#"><span>First Year </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                      <li><a href="#">Semester 1</a></li>
-                      <li><a href="#"> Semester 2</a></li>
+                      <li><a href="{{ route('sem1')}}">Semester 1</a></li>
+                      <li><a href="{{ route('sem2')}}"> Semester 2</a></li>
                     </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>Second Year </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                      <li><a href="#">Semester 3</a></li>
-                      <li><a href="#"> Semester 4</a></li>
+                      <li><a href="{{ route('sem3')}}">Semester 3</a></li>
+                      <li><a href="{{ route('sem4')}}"> Semester 4</a></li>
                     </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>third Year </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                      <li><a href="{{ route('watch',5)}}">Semester 5</a></li>
-                      <li><a href="{{ route('show')}}"> Semester 6</a></li>
+                      <li><a href="{{ route('sem5')}}">Semester 5</a></li>
+                      <li><a href="{{ route('sem6')}}"> Semester 6</a></li>
                     </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>fourth Year </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                      <li><a href="#">Semester 7</a></li>
-                      <li><a href="#"> Semester 8</a></li>
+                      <li><a href="{{ route('sem7')}}">Semester 7</a></li>
+                      <li><a href="{{ route('sem8')}}"> Semester 8</a></li>
                     </ul>
                   </li>
                   
                 </ul>
                 </li>
                 <li><a href="#why-us">Why Us</a></li>
-                <li><a href="#cont">contribute</a></li>
+                <li><a href="#cont">Contribute</a></li>
                 <li><a href="#about">About Us</a></li>
                 {{-- <li><a href="#ourserv">Our Services</a></li>
                 <li><a href="#why">Our Journel</a></li> --}}
@@ -223,16 +223,16 @@
                   Under the mentorship of
                   </h3>
                   
-                </p>
-                <ul>
-                </ul><p class="fst-italic">
-                <h5>
+                </p><p class="fst-italic">
+                  <h5>
+                    <ul>
 
-                  <li> Dr. Rajeev Pandey</li>
-                  <li> -Associate Professor, DoCSE</li>
-                  <li> Prof. Jashwant Samar</li>
-                  <li> -Assistant Professor, DoCSE</li>
-                </h5><br><br>
+                      <li> Dr. Rajeev Pandey</li>
+                      <li> -Associate Professor, DoCSE</li>
+                      <li>  Prof. Jashwant Samar</li>
+                      <li> -Assistant Professor, DoCSE</li>
+                    </h5><br><br>
+                  </ul>
                   <ul>
                   </div>
             </div>
