@@ -29,9 +29,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-      
+
         <title>RGPV</title>
-        
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -49,7 +49,7 @@
 
 =======
 
-            
+
 >>>>>>> 924c204c084ccd86d5bb3020d1a2622c6278d063
 
 
@@ -75,11 +75,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> 924c204c084ccd86d5bb3020d1a2622c6278d063
       <a href="#" class="logo d-flex align-items-center me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
@@ -88,13 +84,8 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="#her">Home</a></li>
-<<<<<<< HEAD
-          <li class="dropdown" style="z-index: -1"><a href="#resource"><span>Resources
-            </span> <i class="bi bi-chevron-down dropdown-indicator" style="z-index: 999999"></i></a>
-=======
           <li class="dropdown"><a href="#resource"><span>Resources
             </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
->>>>>>> 924c204c084ccd86d5bb3020d1a2622c6278d063
             <ul>
                 <li class="dropdown"><a href="#"><span>First Year </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
@@ -108,31 +99,19 @@
                       <li><a href="{{ route('sem4')}}"> Semester 4</a></li>
                     </ul>
                   </li>
-<<<<<<< HEAD
-                  <li class="dropdown"><a href="#"><span>Third Year </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-=======
                   <li class="dropdown"><a href="#"><span>third Year </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
->>>>>>> 924c204c084ccd86d5bb3020d1a2622c6278d063
                     <ul>
                       <li><a href="{{ route('sem5')}}">Semester 5</a></li>
                       <li><a href="{{ route('sem6')}}"> Semester 6</a></li>
                     </ul>
                   </li>
-<<<<<<< HEAD
-                  <li class="dropdown"><a href="#"><span>Fourth Year </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-=======
                   <li class="dropdown"><a href="#"><span>fourth Year </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
->>>>>>> 924c204c084ccd86d5bb3020d1a2622c6278d063
                     <ul>
                       <li><a href="{{ route('sem7')}}">Semester 7</a></li>
                       <li><a href="{{ route('sem8')}}"> Semester 8</a></li>
                     </ul>
                   </li>
-<<<<<<< HEAD
 
-=======
-                  
->>>>>>> 924c204c084ccd86d5bb3020d1a2622c6278d063
                 </ul>
                 </li>
                 <li><a href="#why-us">Why Us</a></li>
@@ -159,11 +138,7 @@
         <div class="section-header">
           <p>Home </p>
         </div>
-<<<<<<< HEAD
 <p>Welcome to our notes sharing website, where knowledge meets collaboration. Whether you're a student, professional, or lifelong learner, our platform empowers you to create, discover, and share notes on any topic under cse.</p>
-=======
-<p>Welcome to our notes sharing website, where knowledge meets collaboration. Whether you're a student, professional, or lifelong learner, our platform empowers you to create, discover, and share notes on any topic under cse.</p>   
->>>>>>> 924c204c084ccd86d5bb3020d1a2622c6278d063
 <p>From study guides for exams to insightful reflections on personal experiences, our diverse community contributes to a rich tapestry of learning resources. Dive into a world of curated knowledge, where every note is a stepping stone toward greater understanding. Join us today and unleash the power of collective intelligence. Together, we can turn individual insights into shared wisdom, making learning a collaborative adventure for all.</p>
 <p>With features designed for seamless collaboration, you can co-author notes, provide feedback, and engage in lively discussions, fostering a vibrant community of learners. Join us in shaping the future of education by harnessing the power of shared knowledge. Start your journey today and unlock endless possibilities with our notes sharing website!</p></div>
 
@@ -226,20 +201,12 @@
 
     <section id="about" class="about">
         <div class="container" data-aos="fade-up">
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 924c204c084ccd86d5bb3020d1a2622c6278d063
           <div class="section-header">
             <h2>About Us</h2>
             <p>Learn More <span>About Us</span></p>
           </div>
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 924c204c084ccd86d5bb3020d1a2622c6278d063
           <div class="row object-fit-cover gy-4">
             <div class="col-lg-7 position-relative about-img " style="background-image: url(assets/img/about.jpg) ;background-repeat:no-repeat;" data-aos="fade-up" data-aos-delay="150">
              <img src="" alt="">
@@ -250,31 +217,18 @@
                   <h3>
                   Our Team
                   </h3>
-<<<<<<< HEAD
 
                 </p>
                 <ul>
                 </ul><p class="fst-italic">
 
-                  <h5 class="ms-5">
-=======
-                  
-                </p>
-                <ul>
-                </ul><p class="fst-italic">
-                
                   <h5>
->>>>>>> 924c204c084ccd86d5bb3020d1a2622c6278d063
                     <li>Laxmikant Dhanka</li>
                     <li> Panday Nabh</li>
                     <li> Sahil Mansoori</li>
                     <li> Syed Asim Ali</li>
                   </h5>
-<<<<<<< HEAD
-
-=======
                     <ul>
->>>>>>> 924c204c084ccd86d5bb3020d1a2622c6278d063
               {{-- </div> --}}
               <br>
               {{-- <div class="content ps-0 ps-lg-5"> --}}
@@ -282,27 +236,7 @@
                   <h3>
                   Under the mentorship of
                   </h3>
-<<<<<<< HEAD
 
-                </p>
-                <ul>
-                </ul><p>
-                  <h5 class="fst-italic ms-5" >
-
-
-                      <li> Dr. Rajeev Pandey<br> -Associate Professor, DoCSE</li>
-                      <li>  Prof. Jashwant Samar<br> -Assistant Professor, DoCSE</li>
-                    </h5><br><br>
-                      <ul>
-                  </div>
-            </div>
-          </div>
-
-        </div>
-      </section><!-- End About Section -->
-
-=======
-                  
                 </p><p class="fst-italic">
                   <h5>
                     <ul>
@@ -312,16 +246,14 @@
                       <li>  Prof. Jashwant Samar</li>
                       <li> -Assistant Professor, DoCSE</li>
                     </h5><br><br>
-                  </ul>
-                  <ul>
+                      <ul>
                   </div>
             </div>
           </div>
-  
+
         </div>
       </section><!-- End About Section -->
-    
->>>>>>> 924c204c084ccd86d5bb3020d1a2622c6278d063
+
 
       <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

@@ -22,7 +22,6 @@ class NotesController extends Controller
         return view('notes')->with('data', $notes);
     }
 
-    
     public function adminindex()
     {
 
@@ -39,7 +38,7 @@ class NotesController extends Controller
         // dd($notes);
         // echo $notes->notes;
     }
-    
+
     public function create(): View
     {
         $subjects = Subjects::all();
@@ -48,22 +47,22 @@ class NotesController extends Controller
 
     public function store(Request $request): RedirectResponse
     {
-        $data= new Notes();       
+        $data= new Notes();
         $data->id=$request->id;
         $pyq1 = $request->pyq1;
         $pyq1name = time().'1.'.$pyq1->getClientOriginalExtension();
         $request->pyq1->move('assets/folder',$pyq1name);
-        $data->pyq1=$pyq1name;    
+        $data->pyq1=$pyq1name;
 
         $pyq2 = $request->pyq2;
         $pyq2name = time().'2.'.$pyq2->getClientOriginalExtension();
         $request->pyq2->move('assets/folder',$pyq2name);
-        $data->pyq2=$pyq2name;    
+        $data->pyq2=$pyq2name;
 
         $pyq3 = $request->pyq3;
         $pyq3name = time().'3.'.$pyq3->getClientOriginalExtension();
         $request->pyq3->move('assets/folder',$pyq3name);
-        $data->pyq3=$pyq3name;    
+        $data->pyq3=$pyq3name;
 
         $notes = $request->notes;
         $notesname = time().'n.'.$notes->getClientOriginalExtension();
@@ -77,16 +76,19 @@ class NotesController extends Controller
         return redirect()->back();
         // return redirect('super-admin/dashboard')->with('flash_message', 'notes Addedd!');
     }
+
     public function show(string $id): View
     {
         $notes = Notes::find($id);
         return view('notes.show')->with('notes', $notes);
     }
+
     public function edit(string $id): View
     {
         $notes = Notes::find($id);
         return view('notes.edit')->with('notes', $notes);
     }
+
     public function update(Request $request, string $id): RedirectResponse
     {
         $student = Notes::find($id);
@@ -95,6 +97,7 @@ class NotesController extends Controller
         session()->flash('msg', 'Successfully done the operation.');
         return redirect()->back();
     }
+
     public function destroy(string $id)
     {
         $data = Notes::find($id);
@@ -106,13 +109,7 @@ class NotesController extends Controller
         @unlink($file_path3);
         $file_path4 = public_path("assets/folder/").$data->notes;
         @unlink($file_path4);
-        
 
-
-
-
-
-        
         // $file_path1 = public_path("storage/").$data->notes;
         // $file_path2 = app_path().$data->pyq2;
         // $file_path3 = app_path().$data->pyq3;
@@ -132,9 +129,8 @@ class NotesController extends Controller
         Notes::destroy($id);
         session()->flash('msg', 'Successfully done the operation.');
         return redirect()->back();
-        // return redirect('super-admin/dashboard')->with('flash_message', 'Notes deleted!'); 
+        // return redirect('super-admin/dashboard')->with('flash_message', 'Notes deleted!');
     }
-
 
     // sub-admin
     public function sbadminindex()
@@ -153,7 +149,7 @@ class NotesController extends Controller
         // dd($notes);
         // echo $notes->notes;
     }
-    
+
     public function sbcreate(): View
     {
         $subjects = Subjects::all();
@@ -162,22 +158,22 @@ class NotesController extends Controller
 
     public function sbstore(Request $request): RedirectResponse
     {
-        $data= new Notes();       
+        $data= new Notes();
         $data->id=$request->id;
         $pyq1 = $request->pyq1;
         $pyq1name = time().'1.'.$pyq1->getClientOriginalExtension();
         $request->pyq1->move('assets/folder',$pyq1name);
-        $data->pyq1=$pyq1name;    
+        $data->pyq1=$pyq1name;
 
         $pyq2 = $request->pyq2;
         $pyq2name = time().'2.'.$pyq2->getClientOriginalExtension();
         $request->pyq2->move('assets/folder',$pyq2name);
-        $data->pyq2=$pyq2name;    
+        $data->pyq2=$pyq2name;
 
         $pyq3 = $request->pyq3;
         $pyq3name = time().'3.'.$pyq3->getClientOriginalExtension();
         $request->pyq3->move('assets/folder',$pyq3name);
-        $data->pyq3=$pyq3name;    
+        $data->pyq3=$pyq3name;
 
         $notes = $request->notes;
         $notesname = time().'n.'.$notes->getClientOriginalExtension();
@@ -191,16 +187,19 @@ class NotesController extends Controller
         return redirect()->back();
         // return redirect('super-admin/dashboard')->with('flash_message', 'notes Addedd!');
     }
+
     public function sbshow(string $id): View
     {
         $notes = Notes::find($id);
         return view('sub-admin.not.show')->with('notes', $notes);
     }
+
     public function sbedit(string $id): View
     {
         $notes = Notes::find($id);
         return view('sub-admin.not.edit')->with('notes', $notes);
     }
+
     public function sbupdate(Request $request, string $id): RedirectResponse
     {
         $student = Notes::find($id);
@@ -209,6 +208,7 @@ class NotesController extends Controller
         session()->flash('msg', 'Successfully done the operation.');
         return redirect()->back();
     }
+
     public function sbdestroy(string $id)
     {
         $data = Notes::find($id);
@@ -223,39 +223,8 @@ class NotesController extends Controller
         Notes::destroy($id);
         session()->flash('msg', 'Successfully done the operation.');
         return redirect()->back();
-        // return redirect('super-admin/dashboard')->with('flash_message', 'Notes deleted!'); 
+        // return redirect('super-admin/dashboard')->with('flash_message', 'Notes deleted!');
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     // super-admin
     public function spadminindex()
@@ -274,7 +243,7 @@ class NotesController extends Controller
         // dd($notes);
         // echo $notes->notes;
     }
-    
+
     public function spcreate(): View
     {
         $subjects = Subjects::all();
@@ -283,22 +252,22 @@ class NotesController extends Controller
 
     public function spstore(Request $request): RedirectResponse
     {
-        $data= new Notes();       
+        $data= new Notes();
         $data->id=$request->id;
         $pyq1 = $request->pyq1;
         $pyq1name = time().'1.'.$pyq1->getClientOriginalExtension();
         $request->pyq1->move('assets/folder',$pyq1name);
-        $data->pyq1=$pyq1name;    
+        $data->pyq1=$pyq1name;
 
         $pyq2 = $request->pyq2;
         $pyq2name = time().'2.'.$pyq2->getClientOriginalExtension();
         $request->pyq2->move('assets/folder',$pyq2name);
-        $data->pyq2=$pyq2name;    
+        $data->pyq2=$pyq2name;
 
         $pyq3 = $request->pyq3;
         $pyq3name = time().'3.'.$pyq3->getClientOriginalExtension();
         $request->pyq3->move('assets/folder',$pyq3name);
-        $data->pyq3=$pyq3name;    
+        $data->pyq3=$pyq3name;
 
         $notes = $request->notes;
         $notesname = time().'n.'.$notes->getClientOriginalExtension();
@@ -312,16 +281,19 @@ class NotesController extends Controller
         return redirect()->back();
         // return redirect('super-admin/dashboard')->with('flash_message', 'notes Addedd!');
     }
+
     public function spshow(string $id): View
     {
         $notes = Notes::find($id);
         return view('super-admin.note.show')->with('notes', $notes);
     }
+
     public function spedit(string $id): View
     {
         $notes = Notes::find($id);
         return view('super-admin.note.edit')->with('notes', $notes);
     }
+
     public function spupdate(Request $request, string $id): RedirectResponse
     {
         $student = Notes::find($id);
@@ -330,6 +302,7 @@ class NotesController extends Controller
         session()->flash('msg', 'Successfully done the operation.');
         return redirect()->back();
     }
+
     public function spdestroy(string $id)
     {
         $data = Notes::find($id);
@@ -344,7 +317,6 @@ class NotesController extends Controller
         Notes::destroy($id);
         session()->flash('msg', 'Successfully done the operation.');
         return redirect()->back();
-        // return redirect('super-admin/dashboard')->with('flash_message', 'Notes deleted!'); 
+        // return redirect('super-admin/dashboard')->with('flash_message', 'Notes deleted!');
     }
-
 }
