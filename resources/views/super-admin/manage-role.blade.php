@@ -30,7 +30,7 @@
                     {{-- @foreach ($roles as $role) --}}
                         {{-- <option value="{{ $role->id }}">{{ $role->name }}</option> --}}
                     {{-- @endforeach --}}
-                    <option value="2">Super Admin</option>
+                    <option value="2">Sub Admin</option>
                     <option value="3">Admin</option>
                     <option value="0">User</option>
                 </select>
