@@ -1,7 +1,6 @@
 @extends('layout/layout')
 
 @section('space-work')
-
     <h2 class="mb-4">Manage Role</h2>
 
     <form action="{{ route('updateRole') }}" method="POST">
@@ -16,7 +15,7 @@
                     @foreach ($users as $user)
                         <option value="{{ $user->id }}">{{ $user->name }}</option>
                     @endforeach
-                    
+
                 </select>
             </div>
         </div>
@@ -28,7 +27,7 @@
                 <select name="role_id" required class="form-control" style="border: 1px solid;">
                     <option value="">Select Role</option>
                     {{-- @foreach ($roles as $role) --}}
-                        {{-- <option value="{{ $role->id }}">{{ $role->name }}</option> --}}
+                    {{-- <option value="{{ $role->id }}">{{ $role->name }}</option> --}}
                     {{-- @endforeach --}}
                     <option value="2">Sub Admin</option>
                     <option value="3">Admin</option>
@@ -38,5 +37,4 @@
         </div>
         <input type="submit" value="Update Role" class="btn btn-primary">
     </form>
-
 @endsection

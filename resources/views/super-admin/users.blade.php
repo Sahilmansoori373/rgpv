@@ -1,7 +1,6 @@
 @extends('layout/layout')
 
 @section('space-work')
-
     <h2 class="mb-4">Users</h2>
 
     <table class="table">
@@ -20,13 +19,10 @@
                     @if ($user->roles == null)
                         User
                     @else
-
-                    {{ $user->roles->name }}
-
+                        {{ $user->roles->name }}
                     @endif
                 </td>
             </tr>
         @endforeach
     </table>
-
 @endsection

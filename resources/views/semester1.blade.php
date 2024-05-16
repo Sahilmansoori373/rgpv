@@ -3,13 +3,13 @@
     <!-- ======= About Section ======= -->
     <section id="resource" class="about">
         <div class="container" data-aos="fade-up">
-  
-          <div class="section-header">
-            <h3>Subjects</h3>
-            <p>Select  <span>Subjects</span> Here</p>
-          </div>
-  
-          {{-- <div class="row gy-4">
+
+            <div class="section-header">
+                <h3>Subjects</h3>
+                <p>Select <span>Subjects</span> Here</p>
+            </div>
+
+            {{-- <div class="row gy-4">
             <div class="col-lg-7 position-relative about-img" style="background-image: url(assets/img/about.jpg) ;" data-aos="fade-up" data-aos-delay="150">
               <div class="call-us position-absolute">
                 <h4>Book a Table</h4>
@@ -41,18 +41,18 @@
               </div>
             </div>
         </div> --}}
-        
-        {{-- <div class="container"> --}}
+
+            {{-- <div class="container"> --}}
             <div class="row">
-     
+
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
                             <h2>Computer Science & Engineering</h2>
                         </div>
                         <div class="card-body">
-                            <br/>
-                            <br/>
+                            <br />
+                            <br />
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -65,31 +65,32 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($subject as $item)
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $item->name }}</td>
-                                            <td>{{ $item->code }}</td>
-                                            <td> Semester {{ $item->semester }}</td>
-     
-                                            <td>
-                                                <a href="{{ route('show.notes', $item->id)}}" title="View Subject" target="_blank"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                                {{-- <a href="#" title="View Subject"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> --}}
-                                                {{-- <a href="{{ url('/student/' . $item->id) }}" title="View Subject"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> --}}
-                                             </td>
-                                        </tr>
-                                    @endforeach
+                                        @foreach ($subject as $item)
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $item->name }}</td>
+                                                <td>{{ $item->code }}</td>
+                                                <td> Semester {{ $item->semester }}</td>
+
+                                                <td>
+                                                    <a href="{{ route('show.notes', $item->id) }}" title="View Subject"
+                                                        target="_blank"><button class="btn btn-info btn-sm"><i
+                                                                class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                                    {{-- <a href="#" title="View Subject"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> --}}
+                                                    {{-- <a href="{{ url('/student/' . $item->id) }}" title="View Subject"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> --}}
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
-     
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         {{-- </div> --}}
-      </section>
-      <!-- End About Section -->
-  
+    </section>
+    <!-- End About Section -->
 @endsection

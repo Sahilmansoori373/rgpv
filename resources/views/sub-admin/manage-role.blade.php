@@ -1,7 +1,6 @@
 @extends('layout/layout')
 @extends('sub-admin.dashboard')
 @section('space-work')
-
     <h2 class="mb-4">Manage Role</h2>
 
     <form action="{{ route('updateRole') }}" method="POST">
@@ -27,16 +26,15 @@
                 <select name="role_id" required class="form-control" style="border: 1px solid;">
                     <option value="">Select Role</option>
                     {{-- @foreach ($roles as $role) --}}
-                        {{-- <option value="{{ $role->id }}">{{ $role->name }}</option> --}}
-                        
-                         <option value="3">Admin</option>
-                         <option value="0">User</option>
+                    {{-- <option value="{{ $role->id }}">{{ $role->name }}</option> --}}
+
+                    <option value="3">Admin</option>
+                    <option value="0">User</option>
                     {{-- @endforeach --}}
                     {{-- <option value="0">User</option> --}}
                 </select>
             </div>
         </div>
         <input type="submit" value="Update Role" class="btn btn-primary">
-    </form> 
-
-@endsection 
+    </form>
+@endsection
