@@ -20,7 +20,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h2>Computer Science Engineering</h2>
+                            <h2>Computer Science & Engineering</h2>
                         </div>
                         <div class="card-body">
                             <div class="card-body">
@@ -34,7 +34,7 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>Sr No.</th>
                                             <th>Subject Name</th>
                                             <th>pyq1</th>
                                             <th>pyq2</th>
@@ -57,7 +57,7 @@
                                             <td>
                                                 <a href="{{ route('view.notes', $item->id)}}" ><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                                 <a href="{{ route('edit.notes', $item->id)}}" ><button class="btn btn-success btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Edit</button></a>
-                                                <a href="{{ route('delete.notes', $item->id)}}"><button class="btn btn-danger btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Delete</button></a>
+                                                {{-- <a href="{{ route('delete.notes', $item->id)}}"><button class="btn btn-danger btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Delete</button></a> --}}
                                             </td>
                                         </tr>
                                     @endforeach

@@ -48,7 +48,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h2>Computer Science Engineering</h2>
+                            <h2>Computer Science & Engineering</h2>
                         </div>
                         <div class="card-body">
                             <br/>

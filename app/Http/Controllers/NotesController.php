@@ -106,29 +106,6 @@ class NotesController extends Controller
         @unlink($file_path3);
         $file_path4 = public_path("assets/folder/").$data->notes;
         @unlink($file_path4);
-        
-
-
-
-
-
-        
-        // $file_path1 = public_path("storage/").$data->notes;
-        // $file_path2 = app_path().$data->pyq2;
-        // $file_path3 = app_path().$data->pyq3;
-        // $file_path4 = app_path().$data->notes;
-        // unlink($file_path1,$file_path2);
-        // unlink($file_path3,$file_path4);
-        // Storage::delete($data->pyq1);
-        // File::delete(public_path('1714540744n'));
-        // @unlink($file_path1);
-        // return $file_path1;
-        // File::delete($data->notes);
-        // File::delete($data->pyq1, $data->pyq2, $data->pyq3);
-        // if(file_exists($file_path)){
-        //     File::delete($file_path);
-        // }
-        // Storage::disk('public')->delete("");
         Notes::destroy($id);
         session()->flash('msg', 'Successfully done the operation.');
         return redirect()->back();
@@ -184,7 +161,12 @@ class NotesController extends Controller
         $request->notes->move('assets/folder',$notesname);
         $data->notes=$notesname;
 
-        $data->syllabus=$request->syllabus;
+        $syllabus = $request->syllabus;
+        $syllabusname = time().'n.'.$syllabus->getClientOriginalExtension();
+        $request->notes->move('assets/folder',$syllabusname);
+        $data->syllabus=$syllabusname;
+
+        // $data->syllabus=$request->syllabus;
 
         $data->save();
         session()->flash('msg', 'Successfully done the operation.');
@@ -201,11 +183,116 @@ class NotesController extends Controller
         $notes = Notes::find($id);
         return view('sub-admin.not.edit')->with('notes', $notes);
     }
-    public function sbupdate(Request $request, string $id): RedirectResponse
+    // : RedirectResponse
+    public function sbupdate(Request $request, string $id)
     {
         $student = Notes::find($id);
         $input = $request->all();
-        $student->update($input);
+        
+        // pyq1
+        $filenamep1 = $request->pyq1;
+        $pyq1 = $request->pyq1;
+        if ($filenamep1 != '') {
+            $request->validate([
+                'pyq1'         =>  'required'
+            ]);    
+            $pyq1name = time().'1.'.$pyq1->getClientOriginalExtension();
+            $filenamep1->move('assets/folder',$pyq1name);
+        } else {
+            $request->validate([
+                'pyq1'    =>  'required',
+            ]);
+        }
+        $form_data = array(
+            'pyq1'            =>   $pyq1name,
+        );
+        Notes::whereId($id)->update($form_data);
+        
+
+
+        // pyq2
+        $filenamep2 = $request->pyq2;
+        $pyq2 = $request->pyq2;
+        if ($filenamep2 != '') {
+            $request->validate([
+                'pyq2'         =>  'required'
+            ]);    
+        $pyq2name = time().'2.'.$pyq2->getClientOriginalExtension();
+        $filenamep2->move('assets/folder',$pyq2name);
+        } else {
+            $request->validate([
+                'pyq2'    =>  'required',
+            ]);
+        }
+        $form_data = array(
+            'pyq2'            =>   $pyq2name,
+        );
+        Notes::whereId($id)->update($form_data);
+        
+
+
+        // pyq3
+        $filenamep3 = $request->pyq3;
+        $pyq3 = $request->pyq3;
+        if ($filenamep3 != '') {
+            $request->validate([
+                'pyq3'         =>  'required'
+            ]);    
+        $pyq3name = time().'3.'.$pyq3->getClientOriginalExtension();
+        $filenamep3->move('assets/folder',$pyq3name);
+        } else {
+            $request->validate([
+                'pyq3'    =>  'required',
+            ]);
+        }
+        $form_data = array(
+            'pyq3'            =>   $pyq1name,
+        );
+
+        Notes::whereId($id)->update($form_data);
+
+
+        // Notes
+        $filenamen = $request->notes;
+        $notes = $request->notes;
+        if ($filenamep1 != '') {
+            $request->validate([
+                'notes'         =>  'required'
+            ]);    
+        $notesname = time().'n.'.$notes->getClientOriginalExtension();
+        $filenamen->move('assets/folder',$notesname);
+        } else {
+            $request->validate([
+                'notes'    =>  'required',
+            ]);
+        }
+        $form_data = array(
+            'notes'            =>   $notesname,
+        );
+        Notes::whereId($id)->update($form_data);
+        
+        
+        // syllabus
+        $filenamesy = $request->syllabus;
+        $syllabus = $request->syllabus;
+        if ($filenamesy != '') {
+            $request->validate([
+                'syllabus'         =>  'required'
+            ]);    
+        $syllabusname = time().'s.'.$syllabus->getClientOriginalExtension();
+        $filenamep1->move('assets/folder',$syllabusname);
+        } else {
+            $request->validate([
+                'syllabus'    =>  'required',
+            ]);
+        }
+        $form_data = array(
+            'syllabus'            =>   $syllabusname,
+        );
+        Notes::whereId($id)->update($form_data);
+
+
+        // $student->update($input);
         session()->flash('msg', 'Successfully done the operation.');
         return redirect()->back();
     }

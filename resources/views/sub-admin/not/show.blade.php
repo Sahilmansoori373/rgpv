@@ -50,6 +50,7 @@
                                             <td>
                                                 <iframe height="400"  width="400" src="/assets/folder/{{$notes->notes}}"></iframe>
                                             </td>
+                                            {{-- <iframe height="400"  width="400" src="/assets/folder/{{$notes->syllabus}}"></iframe> --}}
                                             <td>{{ $notes->syllabus }}</td>
                                             <td>
                                                 {{-- <a href="{{ route('view.subject', $item->id)}}" title="View Subject"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> --}}
