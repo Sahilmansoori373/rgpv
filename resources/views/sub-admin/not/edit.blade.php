@@ -11,7 +11,7 @@
         <div class="card-header">Notes Page</div>
         <div class="card-body">
 
-            <form action="{{ route('sbupdate.notes', $notes->id) }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('sbupdate.notes', $notes->id) }}" method="post" enctype="multipart/form-data" onsubmit="()=>{console.log('Hello')}">
                 @csrf
 
                 <div class="form-group">
@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-group">
                     <label for="syllabus">syllabus (PDF):</label>
-                    <input type="file" id="syllabus" name="syllabus" accept=".pdf">
+                    <input type="file" id="syllabus" name="syllabus">
                 </div>
                 <input type="submit" id="submit">
             </form>

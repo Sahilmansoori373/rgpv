@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" >
 
 <head>
     <meta charset="utf-8">
@@ -38,7 +38,9 @@
         }
 
         body {
-            margin: 0
+            margin: 0;
+
+            background-image: url('assets/img/RGPVLOGO.jpg');
         }
 
         a {
@@ -512,18 +514,19 @@
                     <div class="section-header">
                         <p>Home </p>
                     </div>
-                    <p>Welcome to our notes sharing website, where knowledge meets collaboration. Whether you're a
-                        student, professional, or lifelong learner, our platform empowers you to create, discover, and
-                        share notes on any topic under cse.</p>
-                    <p>From study guides for exams to insightful reflections on personal experiences, our diverse
-                        community contributes to a rich tapestry of learning resources. Dive into a world of curated
-                        knowledge, where every note is a stepping stone toward greater understanding. Join us today and
-                        unleash the power of collective intelligence. Together, we can turn individual insights into
-                        shared wisdom, making learning a collaborative adventure for all.</p>
-                    <p>With features designed for seamless collaboration, you can co-author notes, provide feedback, and
+                    <br>
+
+                    <p>Welcome to our resource sharing website, where students of DoCSE UIT-RGPV gets every possible learning resource. If you're a
+                        student, our platform gives every learning resources needed for learning any subject that comes under the computer science and enginnering domain.</p>
+                    From study material for exams to insightful reflections on personal experiences, our diverse
+                       learning resources gives you a complete content. Dive into a world of curated
+                        knowledge, where every note is a stepping stone toward greater understanding. Join us today to
+                        enhance your knowledge. Together, we can turn individual insights into
+                        shared wisdom, making learning a adventure for all.</p>
+                    <p>With features designed for enhanced learning, you can take notes, provide feedback, and
                         engage in lively discussions, fostering a vibrant community of learners. Join us in shaping the
                         future of education by harnessing the power of shared knowledge. Start your journey today and
-                        unlock endless possibilities with our notes sharing website!</p>
+                        unlock endless possibilities with website!</p>
                 </div>
 
             </section><!-- End About Section -->
@@ -602,10 +605,10 @@
                     </div>
 
                     <div class="row object-fit-cover gy-4">
-                        <div class="col-lg-7 position-relative about-img "
-                            style="background-image: url(assets/img/about.jpg) ;background-repeat:no-repeat;"
+                        <div class="col-lg-7  about-img "
+                            style="background-image: url(assets/img/about.jpg) ;background-repeat:no-repeat; object-fit:cover"
                             data-aos="fade-up" data-aos-delay="150">
-                            <img src="" alt="">
+                            {{-- <img src="" alt=""> --}}
                         </div>
                         <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
                             <div class="content ps-0 ps-lg-5">
@@ -637,16 +640,16 @@
 
 
                                     </p>
-                                    <p class="fst-italic">
-                                    <h5>
-                                        <ul>
+                                    <p >
+                                    <h5 class="ms-5 fst-italic">
+                                        {{-- <ul> --}}
 
                                             <li> Dr. Rajeev Pandey<br> -Associate Professor, DoCSE</li>
                                             <li> Prof. Jashwant Samar<br> -Assistant Professor, DoCSE</li>
                                     </h5><br><br>
 
-                                    </ul>
-                                    <ul>
+                                    {{-- </ul> --}}
+
                             </div>
                         </div>
                     </div>

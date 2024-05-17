@@ -19,10 +19,17 @@
 
 /* Colors */
 :root {
-  --color-default: #212529;
+  --color-default: #3c3e41;
   --color-primary: #ce1212;
   --color-secondary: #37373f;
 }
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-default: #cdcfd2;
+        --color-primary: #ce1212;
+        --color-secondary: #37373f
+    }
+  }
 
 /* Smooth scroll behavior */
 :root {
@@ -33,8 +40,15 @@
 # General
 --------------------------------------------------------------*/
 body {
+
   font-family: var(--font-default);
   color: var(--color-default);
+  background-image: url('/public/assets/img/RGPVLOGO.JPG'); /* Add your background image URL here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
+
 }
 
 a {

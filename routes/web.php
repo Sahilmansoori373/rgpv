@@ -37,7 +37,7 @@ Route::get('/Semester7',[SubjectsController::class,'sems7'])->name('sem7');
 Route::get('/Semester8',[SubjectsController::class,'sems8'])->name('sem8');
 Route::get('/notes/{id}',[NotesController::class,'view'])->name('show.notes');
 
-Route::get('/register',[AuthController::class,'loadRegister']);
+Route::get('/register',[AuthController::class,'loadRegister'])->name('load');
 Route::post('/register',[AuthController::class,'register'])->name('register');
 // Route::get('/login',function(){
 //     return redirect('/login');
@@ -59,7 +59,7 @@ Route::group(['prefix' => 'super-admin','middleware'=>['web','isSuperAdmin']],fu
     Route::get('/subjects/edit/{id}',[SubjectsController::class,'spedit'])->name('spedit.subject');
     Route::post('/subjects/update/{id}',[SubjectsController::class,'spupdate'])->name('spupdate.subject');
     Route::get('/subjects/delete/{id}',[SubjectsController::class,'spdestroy'])->name('spdelete.subject');
-    
+
     Route::get('/notes',[NotesController::class,'spadminindex'])->name('spnotes');
     Route::get('/notes/add',[NotesController::class,'spcreate'])->name('spaddnotes');
     Route::post('/notes/store',[NotesController::class,'spstore'])->name('spstore.notes');
@@ -67,8 +67,8 @@ Route::group(['prefix' => 'super-admin','middleware'=>['web','isSuperAdmin']],fu
     Route::get('/notes/edit/{id}',[NotesController::class,'spedit'])->name('spedit.notes');
     Route::post('/notes/update/{id}',[NotesController::class,'spupdate'])->name('spupdate.notes');
     Route::get('/notes/delete/{id}',[NotesController::class,'spdestroy'])->name('spdelete.notes');
-    
-    
+
+
     Route::post('/update-role',[SuperAdminController::class,'updateRole'])->name('updateRole');
 });
 
@@ -84,7 +84,7 @@ Route::group(['prefix' => 'sub-admin','middleware'=>['web','isSubAdmin']],functi
     Route::get('/subjects/edit/{id}',[SubjectsController::class,'sbedit'])->name('sbedit.subject');
     Route::post('/subjects/update/{id}',[SubjectsController::class,'sbupdate'])->name('sbupdate.subject');
     Route::get('/subjects/delete/{id}',[SubjectsController::class,'sbdestroy'])->name('sbdelete.subject');
-    
+
     Route::get('/notes',[NotesController::class,'sbadminindex'])->name('sbnotes');
     Route::get('/notes/add',[NotesController::class,'sbcreate'])->name('sbaddnotes');
     Route::post('/notes/store',[NotesController::class,'sbstore'])->name('sbstore.notes');

@@ -70,7 +70,7 @@
                         <span class="h1 fw-bold mb-0">Login</span>
                     </div>
 
-                    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+                    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-1 pt-5 pt-xl-0 mt-xl-n5">
 
                         <form style="width: 23rem;" action="{{ route('login') }}" method="POST">
                             @csrf
@@ -94,7 +94,7 @@
                             </div>
 
                             <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
-                            <p>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
+                            <p>Don't have an account? <a href="{{route('load')}}" class="link-info">Register here</a></p>
 
                         </form>
 
@@ -102,7 +102,7 @@
 
                 </div>
                 <div class="col-sm-6 px-0 d-none d-sm-block">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp"
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img2.webp"
                         alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
                 </div>
             </div>

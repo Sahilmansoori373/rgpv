@@ -94,7 +94,7 @@
                     </div>
                     <div class="form-group">
                         <label for="syllabus">Syllabus (PDF):</label>
-                        <input type="file" id="syllabus" name="syllabus" accept=".pdf" required>
+                        <input type="file" id="syllabus" name="syllabus" required>
                     </div>
             </div>
             <input type="submit" id="submit">
