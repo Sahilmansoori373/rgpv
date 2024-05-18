@@ -1,35 +1,29 @@
 @extends('layout/layout')
 
 @section('space-work')
-    <h1>
+<h2 class="mb-4">Admin</h2>
+    <h1 style="color: green">
         {!! Session::has('msg') ? Session::get('msg') : '' !!}
     </h1>
-
-    <h2 class="mb-4">Admin</h2>
     @if (auth()->user()->role == 2)
         <h5>hello</h5>
     @endif
     <section id="resource" class="about">
         <div class="container" data-aos="fade-up">
-
             <div class="section-header">
                 <h3>Notes</h3>
             </div>
             <div class="row">
-
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h2>Computer Science & Engineering</h2>
+                            <h3>Computer Science & Engineering</h3>
                         </div>
                         <div class="card-body">
                             <div class="card-body">
                                 <a href="{{ route('addnotes') }}" class="btn btn-success btn-sm" title="Add New Student">
                                     <i class="fa fa-plus" aria-hidden="true"></i> Add New
-                                </a>
-                                <br />
-                                <br />
-                                <br />
+                                </a><br><br>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>

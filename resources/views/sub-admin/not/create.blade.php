@@ -62,43 +62,43 @@
             <div class="card-header">Subjects Page</div>
             <div class="card-body">
 
-                <form action="{{ route('sbstore.notes') }}" method="post" enctype="multipart/form-data">
-                    @csrf
-                    <div class="col-md-2">
-                        <label for="">Select Subject</label>
-                    </div>
-                    <div class="col-md-4">
-                        <select name="id" required class="form-control" style="border: 1px solid;">
-                            <option value="">Select Subject</option>
-                            @foreach ($data as $user)
-                                <option value="{{ $user->id }}">{{ $user->name }}</option>
-                            @endforeach
+            <form action="{{ route('sbstore.notes') }}" method="post" enctype="multipart/form-data">
+                @csrf
+            <div class="col-md-2">
+                <label for="">Select Subject</label>
+            </div>
+            <div class="col-md-4">
+                <select name="id" required class="form-control" style="border: 1px solid;">
+                    <option value="">Select Subject</option>
+                    @foreach ($data as $user)
+                        <option value="{{ $user->id }}">{{ $user->name }}</option>
+                    @endforeach
 
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="pyq1">PYQ1 (PDF):</label>
-                        <input type="file" id="pyq1" name="pyq1" accept=".pdf" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="pyq2">PYQ2 (PDF):</label>
-                        <input type="file" id="pyq2" name="pyq2" accept=".pdf" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="pyq3">PYQ3 (PDF):</label>
-                        <input type="file" id="pyq3" name="pyq3" accept=".pdf" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="notes">Notes (PDF):</label>
-                        <input type="file" id="notes" name="notes" accept=".pdf" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="syllabus">Syllabus (PDF):</label>
-                        <input type="file" id="syllabus" name="syllabus" required>
-                    </div>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pyq1">PYQ1 (PDF):</label>
+                <input type="file" id="pyq1" name="pyq1" accept=".pdf" required>
+            </div>
+            <div class="form-group">
+                <label for="pyq2">PYQ2 (PDF):</label>
+                <input type="file" id="pyq2" name="pyq2" accept=".pdf" >
+            </div>
+            <div class="form-group">
+                <label for="pyq3">PYQ3 (PDF):</label>
+                <input type="file" id="pyq3" name="pyq3" accept=".pdf" >
+            </div>
+            <div class="form-group">
+                <label for="notes">Notes (PDF):</label>
+                <input type="file" id="notes" name="notes" accept=".pdf" required>
+            </div>
+            <div class="form-group">
+                <label for="syllabus">Syllabus (PDF):</label>
+                <input type="file" id="notes" name="syllabus" accept=".pdf" required>
+            </div>
             </div>
             <input type="submit" id="submit">
-            </form>
+        </form>
         </div>
         </div>
     @endsection

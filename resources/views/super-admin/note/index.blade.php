@@ -1,22 +1,19 @@
 @extends('layout/layout')
 
 @section('space-work')
-    <h1>
+    <h1 style="color: green">
         {!! Session::has('msg') ? Session::get('msg') : '' !!}
     </h1>
-
     <h2 class="mb-4">Super Admin</h2>
     @if (auth()->user()->role == 2)
         <h5>hello</h5>
     @endif
     <section id="resource" class="about">
         <div class="container" data-aos="fade-up">
-
             <div class="section-header">
                 <h3>Notes</h3>
             </div>
             <div class="row">
-
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">

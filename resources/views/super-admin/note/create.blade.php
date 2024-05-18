@@ -52,11 +52,11 @@
     @extends('layout/layout')
 
     @section('space-work')
+    <h2 class="mb-4">Super Admin</h2>
         <h1>
             {!! Session::has('msg') ? Session::get('msg') : '' !!}
         </h1>
 
-        <h2 class="mb-4">Super Admin</h2>
 
         <div class="card">
             <div class="card-header">Subjects Page</div>
@@ -93,8 +93,8 @@
                         <input type="file" id="notes" name="notes" accept=".pdf" required>
                     </div>
                     <div class="form-group">
-                        <label>Syllabus</label>
-                        <input type="text" name="syllabus" class="form-control">
+                        <label for="syllabus">Syllabus (PDF):</label>
+                        <input type="file" id="notes" name="syllabus" accept=".pdf" required>
                     </div>
                     <input type="submit" id="submit">
                 </form>
