@@ -1,0 +1,2 @@
+ return countX == countO;
+}
