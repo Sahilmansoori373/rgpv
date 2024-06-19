@@ -51,6 +51,20 @@
     background-color: #0056b3;
   }
 
+  .signup-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .signup-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+
   @media (max-width: 768px) {
     .container {
       max-width: 300px;
@@ -74,6 +88,9 @@
     <input type="password" name="password" placeholder="Password" required>
     <input type="password" name="password_confirmation" placeholder="confirm Password" required>
     <input type="submit" value="Register">
+    <div class="signup-link">
+      <p>Already registered? <a href="{{url('/login')}}" class="link-info">Login</a></p>
+    </div>
   </form>
 </div>
 

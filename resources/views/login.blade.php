@@ -101,11 +101,9 @@
         <h2>Login</h2>
         <form style="width: 23rem;" action="{{ route('login') }}" method="POST">
             @csrf
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
 
             <input type="submit" value="Login">
         </form>
