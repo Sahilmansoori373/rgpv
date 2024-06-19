@@ -14,23 +14,31 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h2>Computer Science Engineering</h2>
+                            <h3>Computer Science & Engineering</h3>
                         </div>
                         <div class="card-body">
                             <div class="card-body">
+                               <h3>
+                            pyq1       
+                                   <iframe height="400" width="400" src="/assets/folder/{{ $notes->pyq1 }}"></iframe>
+                            </h3> 
+                               <h3>
+                            pyq2       
+                                   <iframe height="400" width="400" src="/assets/folder/{{ $notes->pyq2 }}"></iframe>
+                            </h3> 
 
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>#</th>
+                                                <th>Sr
+                                                     No</th>
                                                 {{-- <th>Subject Name</th> --}}
                                                 <th>Pyq 1</th>
                                                 <th>Pyq 2</th>
                                                 <th>Pyq 3</th>
                                                 <th>Notes</th>
                                                 <th>Syllabus</th>
-                                                <th>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -38,8 +46,7 @@
                                             <tr>
                                                 <td>{{ $notes->id }}</td>
                                                 <td>
-                                                    <iframe height="400" width="400"
-                                                        src="/assets/folder/{{ $notes->pyq1 }}"></iframe>
+                                                    <iframe height="400" width="400" src="/assets/folder/{{ $notes->pyq1 }}"></iframe>
                                                 </td>
                                                 <td>
                                                     <iframe height="400" width="400"
@@ -53,14 +60,11 @@
                                                     <iframe height="400" width="400"
                                                         src="/assets/folder/{{ $notes->notes }}"></iframe>
                                                 </td>
-                                                <td>{{ $notes->syllabus }}</td>
                                                 <td>
-                                                    {{-- <a href="{{ route('view.subject', $item->id)}}" title="View Subject"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> --}}
-                                                    {{-- <a href="#" title="View Subject"><button class="btn btn-success btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Edit</button></a> --}}
-                                                    {{-- <a href="{{ url('/student/' . $item->id) }}" title="View Subject"><button class="btn btn-danger btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Delete</button></a> --}}
+                                                    <iframe height="400" width="400"
+                                                        src="/assets/folder/{{ $notes->syllabus }}"></iframe>
                                                 </td>
                                             </tr>
-                                            {{-- @endforeach --}}
                                         </tbody>
                                     </table>
                                 </div>
@@ -70,6 +74,5 @@
                     </div>
                 </div>
             </div>
-            {{-- </div> --}}
     </section>
 @endsection
