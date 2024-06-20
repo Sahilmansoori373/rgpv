@@ -491,7 +491,7 @@
                             </ul>
                         </li>
                         <li><a href="#why-us">Why Us</a></li>
-                        <li><a href="#cont">Contribute</a></li>
+                        <li><a href="https://github.com/Sahilmansoori373/rgpv">Contribute</a></li>
                         <li><a href="#about">About Us</a></li>
                         {{-- <li><a href="#ourserv">Our Services</a></li>
                 <li><a href="#why">Our Journel</a></li> --}}

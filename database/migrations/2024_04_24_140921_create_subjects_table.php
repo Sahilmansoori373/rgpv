@@ -18,6 +18,7 @@ class CreateSubjectsTable extends Migration
             $table->string('name');
             $table->string('code')->unique();
             $table->integer('semester');
+            $table->foreignId('id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
