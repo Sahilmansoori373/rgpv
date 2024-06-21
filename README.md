@@ -1,15 +1,14 @@
-1)
+First Install All necessary Application 
+1 - install PHP 
+2 - Install Xampp 
+3 - Install composer.exe
+and then run this commands on cmd file 
 
-php artisan migrate
+1) php artisan migrate
 
-2)
+2) php artisan db:seed
 
-php artisan db:seed
-
-3)
-
-php artisan serve
-
+3) php artisan serve
 
 superadmin   superadmin@gmail.com
 superadmin   subadmin@gmail.com
